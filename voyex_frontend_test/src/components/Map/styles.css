@@ -1,0 +1,339 @@
+.Map {
+  font-size: 20px;
+  border: none;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.post {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.post-title {
+  font-size: 1.5rem;
+  color: #1e90ff;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.post-content {
+  font-size: 1rem;
+  color: #333;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: #333;
+}
+
+.chat-box {
+  min-height: 250px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.mapboxgl-control-container {
+  z-index: 1;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.card-body img {
+  position: absolute;
+  margin-left: 0;
+  top: 20px;
+  right: 20px;
+}
+
+.container {
+  margin-top: 50px;
+}
+
+.z-index {
+  z-index: 2;
+}
+
+.chat-box p.text-muted {
+  margin-bottom: 0;
+  font-size: 1.1rem;
+}
+
+.col-md-8,
+.col-md-4 {
+  padding: 0 15px;
+}
+
+/* MAP */
+./* Wrapper for the close button and Reset text */
+.geocoder-icon-close::before {
+  /* background-color: transparent; */
+  content: "Reset";
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  /* padding: 10px; */
+  /* border-radius: 50%; */
+  transition: background-color 0.3s ease;
+}
+.geocoder-icon-close {
+  /* background-color: transparent; */
+  content: "Reset: ";
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #333;
+  /* padding: 10px; */
+  /* border-radius: 50%; */
+  transition: background-color 0.3s ease;
+}
+
+.geocoder-icon-close:hover {
+  background-color: #f0f0f0;
+  color: #ff0000;
+}
+
+.geocoder-close-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 8px; /* Space between the close icon and the text */
+}
+
+/* Style the close button */
+
+/* Style the reset text */
+.geocoder-reset-text {
+  font-size: 16px;
+  color: #007bff;
+  transition: color 0.3s ease;
+}
+
+/* Hover effects */
+.geocoder-close-wrapper:hover .geocoder-reset-text {
+  color: #ff0000; /* Change text color on hover */
+}
+
+.geocoder-icon-close:hover {
+  background-color: #f0f0f0; /* Light background on hover */
+  color: #ff0000; /* Red color on hover */
+}
+
+/* General Form Styling */
+.directions-control-inputs {
+  /* border: 50px solid black !important; */
+  justify-content: end;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.mapbox-directions-component label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.mapbox-directions-component input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: border-color 0.3s ease;
+}
+
+.mapbox-directions-component input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Suggestions Dropdown */
+.suggestions-wrapper {
+  position: relative;
+  max-height: 200px;
+  overflow-y: auto;
+  margin-top: 5px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.suggestions-wrapper ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.suggestions-wrapper li {
+  padding: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.suggestions-wrapper li:hover,
+.suggestions-wrapper li.active {
+  background-color: #007bff;
+  color: white;
+}
+
+.suggestions-wrapper li a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* Directions Profile (Driving, Walking, etc.) */
+.mapbox-directions-profile {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.mapbox-directions-profile input[type="radio"] {
+  display: none;
+}
+
+.mapbox-directions-profile label {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #e9ecef;
+  transition: background-color 0.3s ease;
+}
+
+.mapbox-directions-profile input[type="radio"]:checked + label {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Distance and Time Info */
+.mapbox-directions-route-summary {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  color: #333;
+}
+
+.mapbox-directions-instructions {
+  background-color: #f8f9fa;
+  border: 1px solid #e0e0e0;
+  padding: 15px;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
+.mapbox-directions-step {
+  margin-bottom: 10px;
+}
+
+.mapbox-directions-step-maneuver {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.mapbox-directions-step-distance {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+  .directions-control-inputs {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .mapbox-directions-profile {
+    flex-direction: column;
+  }
+
+  .mapbox-directions-route-summary {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.mapboxgl-ctrl-attrib-button {
+  display: none;
+}
+.mapboxgl-ctrl-icon {
+  display: none;
+}
+
+/* src/components/Map/MyMap.css */
+
+/* Navigation */
+.mapboxgl-ctrl-bottom-right .mapboxgl-ctrl-attrib {
+  display: none !important;
+}
+
+/* Reposition the Navigation Controls to Bottom-Right */
+.mapboxgl-ctrl-group.mapboxgl-ctrl {
+  /* Override default positioning */
+  position: absolute;
+  /* bottom: 10px; Distance from the bottom */
+  right: 10px; /* Distance from the right */
+  /* top: auto; */
+  left: auto;
+  /* Optional: Adjust z-index to ensure it stays above the map */
+  z-index: 1;
+}
+
+/* Reposition the Directions Control to Bottom-Left */
+.mapboxgl-ctrl-directions {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  top: auto;
+  right: auto;
+  z-index: 1;
+}

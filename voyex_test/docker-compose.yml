@@ -1,0 +1,56 @@
+services:
+  # Define the backend service for the Django application.
+  backend:
+    # Use the custom image built from the Dockerfile.
+    image: voyex_22:latest
+    # Map the host port 8001 to the container port 8000 (Django's default development server).
+    ports:
+      - 8001:8000
+    # Mount the current directory (host) to the /backend directory inside the container.
+    volumes:
+      - .:/backend
+      # Bind mount directories for media and static files.
+      - ./backend/media-files:/media-files
+      - ./backend/static-files:/static-files
+    # Load environment variables from the 'dev.env' file for the backend service.
+    env_file:
+      - ./envs/dev.env
+    # Run the 'dev.sh' script on container startup, which is likely used to start the Django server.
+    command: "bash /scripts/dev.sh"
+    # Ensure the backend service waits for the PostgreSQL service to be ready.
+    depends_on:
+      - postgres
+    # Assign the backend service to the 'backend_network'.
+    networks:
+      - backend_network
+
+  # Define the PostgreSQL database service.
+  postgres:
+    # Use the official PostgreSQL image.
+    image: postgres:latest
+    # Load environment variables from the 'dev.env' file for the PostgreSQL service.
+    env_file:
+      - ./envs/dev.env
+    # Set a default environment variable for the PostgreSQL password.
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    # Map the host port 5432 to the container port 5432 (PostgreSQL's default port).
+    ports:
+      - 5432:5432
+    # Mount a volume for the PostgreSQL data to ensure persistence.
+    volumes:
+      - postgres_db:/var/lib/postgresql/data
+    # Assign the PostgreSQL service to the 'backend_network'.
+    networks:
+      - backend_network
+
+# Define a custom network for communication between backend and PostgreSQL.
+networks:
+  backend_network:
+    driver: bridge
+
+# Define named volumes for PostgreSQL data, media files, and static files.
+volumes:
+  postgres_db:
+  media-files:
+  static-files:

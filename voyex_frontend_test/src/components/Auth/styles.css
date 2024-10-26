@@ -1,0 +1,29 @@
+.container {
+  max-width: 400px; /* Limit container width for better appearance */
+  margin: auto; /* Center the form */
+}
+
+.card {
+  border-radius: 10px; /* Round corners */
+}
+
+input {
+  transition: border-color 0.2s; /* Smooth transition for input focus */
+}
+
+input:focus {
+  border-color: #007bff; /* Change border color on focus */
+}
+
+.btn-primary {
+  background-color: #007bff; /* Primary button color */
+  border-color: #007bff; /* Button border color */
+}
+
+.btn-outline-secondary {
+  transition: background-color 0.2s; /* Smooth transition for button */
+}
+
+.btn-outline-secondary:hover {
+  background-color: rgba(0, 123, 255, 0.1); /* Change background on hover */
+}

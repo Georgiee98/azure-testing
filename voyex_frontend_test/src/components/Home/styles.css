@@ -1,0 +1,53 @@
+.post {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+.post-title {
+  font-size: 1.25rem;
+  color: #007bff;
+}
+
+.post-content {
+  font-size: 1rem;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.chat-box {
+  min-height: 200px; /* Adjust as needed */
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  overflow-y: auto;
+}
+
+.z-index {
+  z-index: 100;
+}
+
+.mapboxgl-control-container {
+  /* color: red;s */
+  z-index: 100;
+}
+
+.row {
+  display: flex;
+  /* border: 1px solid black; */
+  justify-content: end;
+  height: 100%;
+  z-index: 0;
+}
+
+.card-body img {
+  /* display: ; */
+  position: absolute;
+  margin-left: 0;
+  /* top: 32px; */
+  /* right: 32px; */
+  top: 25px;
+  right: 25px;
+}

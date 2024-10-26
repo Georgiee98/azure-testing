@@ -1,0 +1,44 @@
+name: voyex_22
+dependencies:
+  - python=3.9
+  - pip=24.2
+  - psycopg2
+  - pip:
+      - Django==4.2.16
+      - django-cors-headers==4.4.0
+      - django-debug-toolbar==4.4.6
+      - django-phonenumbers==1.0.1
+      - django-rest-passwordreset==1.4.1
+      - djangorestframework==3.15.2
+      - djangorestframework-simplejwt==5.3.1
+      - exceptiongroup==1.2.2
+      - iniconfig==2.0.0
+      - packaging==24.1
+      - phonenumbers==8.13.45
+      - phonenumberslite==8.13.45
+      - pluggy==1.5.0
+      - PyJWT==2.9.0
+      - pytest==8.3.3
+      - pytest-django==4.9.0
+      - python-decouple==3.8
+      - sqlparse==0.5.1
+      - tomli==2.0.1
+      - typing_extensions==4.12.2
+      - tzdata==2024.1
+      - whitenoise==6.7.0
+      - psycopg2-binary==2.9.9
+      - psycopg2==2.8.6
+      - django-countries==7.6.1
+      - django-timezone-field==7.0
+      - Pillow==10.4.0
+      - channels==4.1.0
+      - channels-redis==4.2.0
+      - stripe==10.11.0
+      - django-allauth==64.2.1
+      - cryptography==43.0.1
+      - dj-rest-auth==6.0.0
+      - djangorestframework-xml==2.0.0
+      - drf-yasg==1.21.7
+      - pycountry
+      # - google-api-python-client==2.147.0
+      # - django-mapbox-location-field==2.1.0
